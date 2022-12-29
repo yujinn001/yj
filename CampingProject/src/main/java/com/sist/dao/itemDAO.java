@@ -1,6 +1,7 @@
 package com.sist.dao;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,8 +34,8 @@ public class itemDAO {
 		}catch(Exception ex) {}
 	}
 	// 캠핑용품 카테고리 추가 
-	// VO에 담아서 넘어온다 // 29개 카테고리 등록
-	public void campingCategoryInsert(CategoryVO vo)
+	// VO에 담아서 넘어온다 // ?개 카테고리 등록
+	public void campingCategoryInsert(CategoryVO vo) // ? 일때 매개변수를 넣어줘야하는건
 	{
 		try {
 			// 1. 연결
@@ -60,6 +61,7 @@ public class itemDAO {
 			disConnection();
 		}
 	}
+	
 	// 카테고리에서 카테고리 번호, 링크, 제목 읽기
 	public ArrayList<CategoryVO> campingCategoryInfoData()
 	{
@@ -95,4 +97,58 @@ public class itemDAO {
 		}
 		return list;
 	}
+
+/*
+ * INO            NOT NULL NUMBER        
+IMAGE          NOT NULL VARCHAR2(260) 
+NAME           NOT NULL VARCHAR2(300) 
+PRICE          NOT NULL NUMBER        
+DESCRIPTION    NOT NULL CLOB          
+STOCK          NOT NULL NUMBER        
+STATUS         NOT NULL VARCHAR2(200) 
+DISCOUNT                NUMBER        
+DELIVERY_PRICE NOT NULL NUMBER        
+LIKE_CNT                NUMBER        
+JJIM_CNT                NUMBER        
+ICNO                    NUMBER        
+LINK                    VARCHAR2(300) 
+ */
+	// 캠핑 목록 상세 페이지 내용
+	public void campingDetailInsert(itemVO vo) // item voitem_ino_seq_2
+	{
+		try
+		{
+			getConnection();
+			String sql ="INSERT INTO item_2(ino, image, name, price, description, stock,status, "
+					+ "discount, delivery_price, like_cnt, jjim_cnt, icno, link "
+					+ "VALUES(item_ino_seq_2,?,?,?,?,?,?,?,?,?,?,?,?)";
+			ps=conn.prepareStatement(sql);
+			//? 값을 추가해준다
+			ps.setString(1, vo.getImage());
+			ps.setString(2, vo.getName());
+		}catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		finally
+		{
+			disConnection();
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
