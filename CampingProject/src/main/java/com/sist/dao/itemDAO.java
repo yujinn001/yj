@@ -42,13 +42,15 @@ public class itemDAO {
 			getConnection();
 			// 2. sql문장 전송
 			// nextval  => 다음값읽기
+			// link 내용 추가
 			// 결과값이 없는 경우 commit 포함 =>executeUpdate()
-			String sql ="INSERT INTO item_category_2 "
-					+ "VALUES(ic_icno_seq_2.nextval,?) ";
+			String sql ="INSERT INTO item_category_test_2 "
+					+ "VALUES(ic_icno_seq_2.nextval,?,?) ";
 			// sql 문장 전송
 			ps=conn.prepareStatement(sql);
 			// ? 값을 넣어 준다
 			ps.setString(1, vo.getName());	
+			ps.setString(2, vo.getLink());
 			// 실행 요청
 			ps.executeUpdate(); //commit 	   
 					
@@ -71,18 +73,19 @@ public class itemDAO {
 			// 1. 연결
 			getConnection();
 			// 2. sql문장 제작
-			String sql="SELECT icno, name"
-					+ "FROM item_category_2 ORDER BY icno ASC";
+			String sql="SELECT icno, name ,link "
+					+ "FROM item_category_test_2 ORDER BY icno ASC";
 			// 3. SQL 문장 전송
 			ps=conn.prepareStatement(sql);
 			// 4. sql 문장 실행 => 결과값 저장
 			ResultSet rs = ps.executeQuery();
 			// 5. ArrayList에 담는다
 			while(rs.next())
-			{
+			{//link내용 추가
 				CategoryVO vo = new CategoryVO();
 				vo.setIcno(rs.getInt(1));
 				vo.setName(rs.getString(2));
+				vo.setLink(rs.getString(3));
 				list.add(vo);
 			}
 			rs.close();
@@ -121,11 +124,24 @@ LINK                    VARCHAR2(300)
 			getConnection();
 			String sql ="INSERT INTO item_2(ino, image, name, price, description, stock,status, "
 					+ "discount, delivery_price, like_cnt, jjim_cnt, icno, link "
-					+ "VALUES(item_ino_seq_2,?,?,?,?,?,?,?,?,?,?,?,?)";
+					+ " VALUES(item_ino_seq_2.nextval,?,?,?,?,?,?,?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
 			//? 값을 추가해준다
 			ps.setString(1, vo.getImage());
 			ps.setString(2, vo.getName());
+			ps.setInt(3, vo.getPrice());
+			ps.setString(4, vo.getDescription());
+			ps.setInt(5, vo.getStock());
+			ps.setString(6,vo.getStatus());
+			ps.setInt(7, vo.getDiscount());
+			ps.setInt(8, vo.getDelivery_price());
+			ps.setInt(9, vo.getLike_cnt());
+			ps.setInt(10, vo.getJjim_cnt());
+			ps.setInt(11, vo.getIcno());
+			ps.setString(12, vo.getLink());
+			
+			ps.executeUpdate();
+			
 		}catch(Exception ex)
 		{
 			ex.printStackTrace();

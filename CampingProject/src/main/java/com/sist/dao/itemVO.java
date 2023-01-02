@@ -16,7 +16,15 @@ ICNO                    NUMBER
  */
 public class itemVO {
 	private int ino,price,stock,discount,delivery_price,like_cnt,jjim_cnt,icno;
-	private String image,name,description,status;
+	private String image,name,description,status,link;
+	
+	
+	public String getLink() {
+		return link;
+	}
+	public void setLink(String link) {
+		this.link = link;
+	}
 	public int getIno() {
 		return ino;
 	}
