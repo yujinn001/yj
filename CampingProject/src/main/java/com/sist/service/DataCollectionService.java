@@ -1,5 +1,6 @@
 package com.sist.service;
 import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 
@@ -10,11 +11,11 @@ import org.jsoup.select.Elements;
 
 import com.sist.dao.CategoryVO;
 import com.sist.dao.itemDAO;
+// import com.sist.dao.*;
 
-public class DataCollectionServer {
+public class DataCollectionService {
 	public static void main(String[] args) {
-		
-		DataCollectionServer ds = new DataCollectionServer();
+		DataCollectionService ds = new DataCollectionService();
 		//1) 카테고리 데이터 목록 가져오기
 	    //ds.campingCategoryGetData();
 		//
@@ -57,11 +58,13 @@ public class DataCollectionServer {
 		{
 			// 페이지가 있는 경우 for문으로 가져온다
 			// 우선 텐트 페이지 목록 상품출력 하기
+			itemDAO dao = new itemDAO();
 
 			for(int i=0; i<=5; i++) // 텐트 페이지가 15페이지 까지 있음
 			{
 				// 페이지 누른후 링크 가져오기
-				Document doc=Jsoup.connect("https://m.campinglist.co.kr/product/list_thumb.html?cate_no=201&page="+i).get();				
+				//Document doc=Jsoup.connect("https://campinglist.co.kr/product/list.html?cate_no=210&page="+i).get();	
+				Document doc=Jsoup.connect("https://campinglist.co.kr/product/list.html?cate_no=210&page="+i).get();				
 				Elements link = doc.select("div.prdImg a");
 
 				for(int j =0; j<=link.size(); j++)
