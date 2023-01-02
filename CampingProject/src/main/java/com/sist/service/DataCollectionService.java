@@ -15,6 +15,7 @@ import com.sist.dao.itemDAO;
 // import com.sist.dao.*;
 
 public class DataCollectionService {
+
    public static void main(String[] args) {
       DataCollectionService ds = new DataCollectionService();
       //1) 카테고리 데이터 목록 가져오기
@@ -103,7 +104,8 @@ public class DataCollectionService {
                
                // 찜하기
                
-               // 장바구니 추가 기능
+               // 장바구니 추가 기능 ?
+        
                // 적립금??
                
                // 배송비 => String으로 그냥 적기
@@ -112,19 +114,3 @@ public class DataCollectionService {
       }catch(Exception ex) {}
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
