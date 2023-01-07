@@ -15,6 +15,7 @@ import java.sql.SQLException;
 
 public class ItemCrawler {
 
+	// 캠핑리스트 사이트
     private static final String DOMAIN = "https://campinglist.co.kr";
 
     private static final String ITEM_LIST = "https://campinglist.co.kr/product/list.html?cate_no=";
@@ -24,7 +25,12 @@ public class ItemCrawler {
 
     // 끝 페이지
     private static final int LAST_PAGE = 1;
-
+    
+    /*  String은 변경 불가능한 문자열을 생성하지만 StringBuilder는 변경 가능한 문자열을 만들어준다
+     *  
+     *  StringBuilder의 객체를 생성한 후 .append("문자열")의 인자로 연결하고자하는 문자열을 넣어쇼ㅓ
+     *  StringBuilder의 객체를 통해 호출한다
+     */
     private final StringBuilder sb = new StringBuilder();
 
     private Connection conn;
@@ -50,6 +56,7 @@ public class ItemCrawler {
                     if (itemDetailPage.length() == 0) {
                         continue;
                     }
+                    // DOMAIN => 캠핑사이트 
                     Item item = into(DOMAIN + itemDetailPage, cateNo);
                     insertDatabase(item);
                 }
@@ -79,6 +86,7 @@ public class ItemCrawler {
                     String subImg = "https:" + img.attr("src");
                     sb.append(subImg).append(",");
                 }
+                // deleteCharAt : 특정 위치의 문자열을 삭제한다
                 sb.deleteCharAt(sb.length() - 1);
                 itemImage = sb.toString();
                 sb.setLength(0);

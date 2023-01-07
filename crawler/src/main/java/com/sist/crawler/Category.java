@@ -1,5 +1,7 @@
 package com.sist.crawler;
-
+// enum : 서로 연관된 상수들의 집합 (final)
+// 기존에 상수를 정의하는 방법이였던 final static string과 같이 문자열이나 숫자들을 나타내는 기본 자료형의 값
+// 코드가 단순해지고 가독성이 좋다
 public enum Category {
 
     // 텐트
@@ -121,21 +123,21 @@ public enum Category {
     CODE_318(318, 105);
 
 
-    private final int code;
+    private final int code; // 카테고리 번호
 
-    private final int cno;
+    private final int cno; // 외래키 
 
-    Category(int code, int cno) {
-        this.code = code;
-        this.cno = cno;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public int getCno() {
-        return cno;
-    }
+	Category(int code, int cno) {
+	    this.code = code;
+	    this.cno = cno;
+	}
+	
+	public int getCode() {
+	    return code;
+	}
+	
+	    public int getCno() {
+	    return cno;
+	}
 
 }
