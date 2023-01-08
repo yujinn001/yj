@@ -18,7 +18,7 @@
                             <ul class="menu-top-link">
                                 <li>
                                 <!-- 누르면 Shop창으로 이동 -->
-                                <a href="index.html" >Shop</a>                             
+                                <a href="index.jsp" >Shop</a>                             
                                 
                                 <!-- 가격 선택 -->
                                     <!-- <div class="select-position">
@@ -34,7 +34,7 @@
                                 </li>
                                 <li>
                                 <!-- 누르면 캠핑장 소개 창으로 이동 -->
-                                <a href="index.html" >Camp</a>
+                                <a href="index.jsp" >Camp</a>
                                 <!-- 언어 선택 -->
                                    <!--  <div class="select-position">
                                         <select id="select5">
@@ -97,7 +97,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.jsp">
                         <!-- 메인페이지 로고 -->
                          <p style= "font-size :40px"> Happy Camping </p>
                         			<!--img => 홈페이지 로고  alt는 img를 보여주지 않을 때 해당 이미지 대신 나타나는 택스트   -->
@@ -316,7 +316,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="index.html" class="active" aria-label="Toggle navigation">홈</a>
+                                        <a href="index.jsp" class="active" aria-label="Toggle navigation">홈</a>
                                     </li>
                                     <li class="nav-item">
                                     <!-- 카테고리 옆 큰 카테고리 뭐 넣을지 생각 => 추가하기 -->

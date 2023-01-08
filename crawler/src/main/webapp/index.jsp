@@ -1,6 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -23,22 +23,24 @@
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">
-            <div class="preload <p style= "font-size :40px"> Happy Camping </p>er-icon">
+            <div class="preload" >
+               <p style= "font-size :40px"> Happy Camping </p>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </div>
     <!-- /End Preloader -->
-
+    
 	<!-- header.jsp -->
-	<jsp:include page ="header.jsp"></jsp:include>
+		<jsp:include page ="assets/main/header.jsp"></jsp:include>
+
 
  	<!-- Content -->
-	<jsp:include page ="content.jsp"></jsp:include>
+	<jsp:include page ="assets/main/content.jsp"></jsp:include>
 
 	<!-- Footer -->
-	<jsp:include page ="1111"></jsp:include>
+	<jsp:include page ="assets/main/footer.jsp"></jsp:include>
 
     <!-- ========================= scroll-top ========================= -->
     <a href="#" class="scroll-top">
