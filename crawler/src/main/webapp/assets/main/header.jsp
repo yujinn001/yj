@@ -18,7 +18,7 @@
                             <ul class="menu-top-link">
                                 <li>
                                 <!-- 누르면 Shop창으로 이동 -->
-                                <a href="index.jsp" >Shop</a>                             
+                                <a href="index.html" >Shop</a>                             
                                 
                                 <!-- 가격 선택 -->
                                     <!-- <div class="select-position">
@@ -81,7 +81,7 @@
                                 </li>  
                                 <!-- 마이쇼핑 아래 품목 추가하기 -->
                                 <li>
-                                    <a href="register.html">마이쇼핑</a>
+                                    <a href="register.html">마이쇼핑</a>                               
                                 </li>
                                                    
                             </ul> <!-- end : user-login -->
@@ -155,10 +155,15 @@
                     <div class="nav-inner">
                         <!-- 카테고리 메뉴 시작 -->
                         <div class="mega-category-menu">
-                            <span class="cat-button"><i class="lni lni-menu"></i>C A T E G O R Y</span>
+                            <span class="cat-button">
+                            	<img src="assets/images/menu.svg" style="width:25px; height:25px; ">
+                            	  &nbsp;&nbsp;C A T E G O R Y
+                            	</span>
                             <ul class="sub-category">
                                <!-- li 대분류 카테고리 -->
-                                <li><a href="product-grids.html"><b>텐트</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>텐트</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                     <!-- ul 소분류 카테고리 -->
                                     <ul class="inner-sub-category">
                                         <li><a href="product-grids.html">거실형텐트(리빙쉘)</a></li>
@@ -172,7 +177,9 @@
                                         <li><a href="product-grids.html">카페트/러그</a></li>                         
                                     </ul>
                                 </li>
-                                <li><a href="product-grids.html"><b>타프/쉘터</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>타프/쉘터</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
 	                                 <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">렉타타프(사각)</a></li>
 	                                        <li><a href="product-grids.html">헥사/옥타/윙타프</a></li>
@@ -180,14 +187,18 @@
 	                                        <li><a href="product-grids.html">윈트스크링/진막</a></li>                    
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>폴대/펙/스트링</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>폴대/펙/스트링</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">폴대</a></li>
 	                                        <li><a href="product-grids.html">팩/망치</a></li>
 	                                        <li><a href="product-grids.html">스토퍼/스트링/로프</a></li>                   
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>테이블/체어</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>테이블/체어</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">스노우피크 IGT</a></li>
 	                                        <li><a href="product-grids.html">캠핑테이블</a></li>
@@ -200,7 +211,9 @@
 	                                        <li><a href="product-grids.html">기타용품</a></li>                    
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>배드/침구/매트</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>배드/침구/매트</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">코트/야전침대</a></li>
 	                                        <li><a href="product-grids.html">자충/에어매트</a></li>
@@ -211,7 +224,9 @@
 	                                        <li><a href="product-grids.html">기타용품</a></li>                            
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>스토브/랜턴</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>스토브/랜턴</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">스토브/버너</a></li>
 	                                        <li><a href="product-grids.html">전기/배터리랜턴</a></li>
@@ -222,7 +237,9 @@
 	                                        <li><a href="product-grids.html">이소가스</a></li>  	                                                        
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>식기/쿠커</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>식기/쿠커</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">컵/시에라</a></li>
 	                                        <li><a href="product-grids.html">커틀러리</a></li>
@@ -237,7 +254,9 @@
 	                                        <li><a href="product-grids.html">기타용품</a></li>                  
 	                                  </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>화로/BBQ</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>화로/BBQ</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">화로대</a></li>
 	                                        <li><a href="product-grids.html">BBQ화로</a></li>
@@ -249,7 +268,9 @@
 	                                        <li><a href="product-grids.html">수납/케이스</a></li>                                      
 	                                  </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>냉방/난방</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>냉방/난방</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">서큘/선풍기</a></li>
 	                                        <li><a href="product-grids.html">화목난로</a></li>
@@ -260,7 +281,9 @@
 	                                        <li><a href="product-grids.html">기타난방용품</a></li>              
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>수납/케이스</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>수납/케이스</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">스노우피크 기어</a></li>
 	                                        <li><a href="product-grids.html">박스/컨테이너</a></li>
@@ -275,7 +298,9 @@
 	                                        <li><a href="product-grids.html">쿨러용품</a></li>   
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>나이프/공구/위생</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>나이프/공구/위생</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">나이프/멀티툴</a></li>
 	                                        <li><a href="product-grids.html">도끼/공구</a></li>
@@ -289,7 +314,9 @@
 	                                        <li><a href="product-grids.html">기타용품</a></li>                    
 	                                    </ul>
 	                            </li>
-                                <li><a href="product-grids.html"><b>배낭/디팩/모자</b><i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html"><b>배낭/디팩/모자</b>
+                                <img src="assets/images/chevron-right.svg" style="width:15px; height:15px; float: right; ">
+                                </a>
                                       <ul class="inner-sub-category">
 	                                        <li><a href="product-grids.html">소형(30L 이하)</a></li>
 	                                        <li><a href="product-grids.html">중형(65L 이하)</a></li>
@@ -316,7 +343,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="index.jsp" class="active" aria-label="Toggle navigation">홈</a>
+                                        <a href="index.html" class="active" aria-label="Toggle navigation">홈</a>
                                     </li>
                                     <li class="nav-item">
                                     <!-- 카테고리 옆 큰 카테고리 뭐 넣을지 생각 => 추가하기 -->
@@ -344,15 +371,15 @@
                                             <div class="navbar-cart">
                                 <div class="wishlist">
                                     <a href="javascript:void(0)">
-                                        <!-- 찜한 목록? 이미지 변경하기 (i)--> 
-                                        <i class="lni lni-heart"></i>
+                                        <!-- 찜한 목록? 이미지 변경하기 (i)-->
+                                        <img src="assets/images/heart.svg" style ="width:20px; height :20px;">                                     
                                         <span class="total-items">1</span>
                                     </a>
                                 </div>
                                 <div class="cart-items">
                                     <a href="javascript:void(0)" class="main-btn">
                                         <!-- 장바구니 내용의 수량 이미지 변경하기 (i)- -->
-                                        <i class="lni lni-cart"></i>
+                                        <img src="assets/images/shopping-basket.svg" style ="width:20px; height :20px;">  
                                         <span class="total-items">2</span>
                                     </a>
                                     <!-- Shopping Item (장바구니 내용)-->
