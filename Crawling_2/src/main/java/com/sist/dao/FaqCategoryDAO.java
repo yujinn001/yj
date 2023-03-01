@@ -1,13 +1,13 @@
 package com.sist.dao;
 import java.util.*;
 import java.sql.*;
-public class FaqDAO {
+public class FaqCategoryDAO {
    private Connection conn;
    private PreparedStatement ps;
    private String URL="jdbc:oracle:thin:@localhost:1521:XE";
    //private String URL="jdbc:oracle:thin:@211.63.89.131:1521:XE";
    
-   public FaqDAO()
+   public FaqCategoryDAO()
    {
 	   try
 	   {
@@ -29,20 +29,18 @@ public class FaqDAO {
 		   if(conn!=null) conn.close();
 	   }catch(Exception ex) {}
    }
-   // 1번 => Faq 내용 추가
-   public void FaqInsertData(FaqVO vo) // 30
-   { // fno TYPE    SUBJECT CONTENT    
+  
+   // 2번 => 이용 안내 (InformationUse 내용)
+   public void FaqCategoryData(FaqCategoryVO vo) // 30
+   { // SFCNO CATE  
 	   try
 	   {
 		   getConnection();
-		   String sql="INSERT INTO sul_faq_2_2(fno,type,subject,content,fcno) VALUES(sf_fno_seq.nextval,?,?,?,?)";
+		   String sql="INSERT INTO sul_faq_category_2_2 VALUES(sfc_fcno_seq.nextval,?)";
 		   // SQL문장 전송 
 		   ps=conn.prepareStatement(sql);
 		   // 실행전에 ?에 값을 채운다 
-		   ps.setString(1, vo.getType());
-		   ps.setString(2, vo.getSubject());
-		   ps.setString(3, vo.getContent());
-		   ps.setInt(4, vo.getFcno());
+		   ps.setString(1, vo.getCate());
 		   // 실행요청 
 		   ps.executeUpdate(); //commit()포함 
 	   }catch(Exception ex)
@@ -53,6 +51,5 @@ public class FaqDAO {
 	   {
 		   disConnection();
 	   }
-   } 
-  
+   }
 }

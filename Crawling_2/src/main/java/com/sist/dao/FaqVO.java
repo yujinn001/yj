@@ -8,9 +8,15 @@ package com.sist.dao;
 	HIT              NUMBER   
  */
 public class FaqVO {
-	private int fno,hit;
+	private int fno,hit,fcno;
 	private String cate,type,subject,content;
 	
+	public int getFcno() {
+		return fcno;
+	}
+	public void setFcno(int fcno) {
+		this.fcno = fcno;
+	}
 	public String getCate() {
 		return cate;
 	}
